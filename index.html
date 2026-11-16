@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hania Heartbeat — Fan Edits</title>
+  <meta name="description" content="Fan edits and reels celebrating Hania Aamir. Every frame, a heartbeat." />
+  <meta name="theme-color" content="#050505" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="is-loading">
+
+  <!-- preloader -->
+  <div class="pre" id="pre" aria-hidden="true">
+    <div class="pre-top"><span>Hania Heartbeat</span><span>Reels &amp; Frames</span></div>
+    <div class="pre-mid">
+      <svg class="ecg" viewBox="0 0 800 120" preserveAspectRatio="none">
+        <path class="ecg-base" d="M0 60 H800" />
+        <path class="ecg-line" id="ecgLine" d="M0 60 H250 L275 60 L290 20 L312 100 L332 8 L352 76 L368 60 H520 L540 44 L556 60 H800" pathLength="1" />
+      </svg>
+      <div class="pre-count"><span id="preNum">0</span><i>%</i></div>
+    </div>
+    <div class="pre-bot"><span>Every frame, a heartbeat.</span><span>Loading</span></div>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="c-dot"></span><span class="c-ring"><em>Play</em></span></div>
+
+  <!-- nav -->
+  <header class="nav" id="nav">
+    <a class="logo" href="#top" data-nav><b>H</b><span>Heartbeat</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu"><span>Menu</span><i></i></button>
+  </header>
+  <nav class="menu" id="menu" aria-label="Main">
+    <ul>
+      <li><a href="#reels" data-nav><small>01</small>Reels</a></li>
+      <li><a href="#frames" data-nav><small>02</small>Frames</a></li>
+      <li><a href="#wall" data-nav><small>03</small>The Wall</a></li>
+      <li><a href="#contact" data-nav><small>04</small>Say hello</a></li>
+    </ul>
+    <p>Fan edits for fans, by a fan.<br /><a href="https://www.instagram.com/hania_heartbeat" target="_blank" rel="noopener">@hania_heartbeat</a></p>
+  </nav>
+
+  <main id="top">
+    <!-- hero -->
+    <section class="hero" id="hero">
+      <video class="hero-vid" id="heroVid" src="assets/reels/r02.mp4" poster="assets/posters/r02.jpg" autoplay muted loop playsinline preload="auto"></video>
+      <div class="hero-shade"></div>
+      <div class="hero-in">
+        <p class="eyebrow" data-hero="fade">A fan edit tribute to <em>Hania Aamir</em></p>
+        <h1 class="hero-title" aria-label="Hania Heartbeat">
+          <span class="line" data-split>HANIA</span>
+          <span class="line" data-split>HEARTBEAT</span>
+        </h1>
+      </div>
+      <div class="hero-foot" data-hero="fade">
+        <div class="rec"><i></i><span>REC</span><time id="tc">00:00:00:00</time></div>
+        <a class="scroll-cue" href="#reels" data-nav><span>Scroll</span><i></i></a>
+        <div class="hero-meta"><span>13 reels</span><span>28 frames</span><a href="https://www.instagram.com/hania_heartbeat" target="_blank" rel="noopener">@hania_heartbeat</a></div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="mq-track"><span>Fan edits ✦ Reels ✦ Frames ✦ Heartbeat ✦ Made with love ✦ </span><span>Fan edits ✦ Reels ✦ Frames ✦ Heartbeat ✦ Made with love ✦ </span><span>Fan edits ✦ Reels ✦ Frames ✦ Heartbeat ✦ Made with love ✦ </span><span>Fan edits ✦ Reels ✦ Frames ✦ Heartbeat ✦ Made with love ✦ </span></div></div>
+
+    <!-- reel index -->
+    <section class="reels sec" id="reels">
+      <header class="sec-head">
+        <p class="kicker">01 — Index</p>
+        <h2>The <em>Reels</em></h2>
+        <p class="sec-note">Thirteen edits. Hover to peek, click to watch with sound.</p>
+      </header>
+      <ol class="reel-list" id="reelList"></ol>
+    </section>
+
+    <!-- frames strip -->
+    <section class="frames" id="frames">
+      <div class="frames-pin" id="framesPin">
+        <div class="frames-track" id="framesTrack">
+          <div class="frames-intro">
+            <p class="kicker">02 — Stills</p>
+            <h2>The <em>Frames</em></h2>
+            <p class="sec-note">Keep scrolling <span>→</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- words -->
+    <section class="words sec" id="words">
+      <p class="kicker">In a few words</p>
+      <p class="words-text" id="wordsText"></p>
+      <p class="words-by">— said by fans, everywhere</p>
+    </section>
+
+    <!-- stacked cards -->
+    <section class="stack sec" id="stack">
+      <div class="stack-list" id="stackList"></div>
+    </section>
+
+    <!-- wall -->
+    <section class="wall sec" id="wall">
+      <header class="sec-head">
+        <p class="kicker">03 — Autoplay</p>
+        <h2>The <em>Wall</em></h2>
+        <p class="sec-note">Everything, playing at once. Tap any tile to watch it properly.</p>
+      </header>
+      <div class="wall-grid" id="wallGrid"></div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="foot" id="contact">
+    <div class="foot-cta">
+      <p class="kicker">04 — Say hello</p>
+      <p class="foot-lead">Want a page like this? <em>Let's talk.</em></p>
+      <p class="foot-sub">Edits, reels and fan-page websites made with the same care. Orders and collabs open — the fastest way is a DM.</p>
+      <a class="btn" href="https://www.instagram.com/hania_heartbeat" target="_blank" rel="noopener"><span>DM @hania_heartbeat</span><i>↗</i></a>
+    </div>
+    <div class="foot-word" aria-label="For the love of Hania"><span data-foot>FOR THE LOVE</span><span data-foot>OF HANIA</span></div>
+    <div class="foot-bar">
+      <span>Fan edits for fans, by a fan.</span>
+      <span>Unofficial fan page · all love, no affiliation</span>
+      <a href="#top" data-nav>Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- player -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Reel player" hidden>
+    <div class="m-bg" data-close></div>
+    <div class="m-top"><span id="mCount">01 / 13</span><button class="m-x" data-close aria-label="Close player">Close ✕</button></div>
+    <div class="m-stage"><video id="mVid" controls playsinline preload="auto"></video></div>
+    <div class="m-bot">
+      <button class="m-arrow" id="mPrev" aria-label="Previous reel">←</button>
+      <div class="m-cap"><b id="mTitle"></b><span id="mSub"></span></div>
+      <button class="m-arrow" id="mNext" aria-label="Next reel">→</button>
+    </div>
+  </div>
+
+  <!-- hover preview -->
+  <div class="peek" id="peek" aria-hidden="true"><video id="peekVid" muted loop playsinline preload="none"></video></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="shared/data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
